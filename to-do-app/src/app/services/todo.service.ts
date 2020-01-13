@@ -11,10 +11,12 @@ export class TodoService {
 
   private static readonly TodoStorageKey = "todos";
 
-  private todos: Todo[];
-  private filteredTodos: Todo[];
+  private todos: Todo[]; // Biến ni chỉ sử dụng trong lớp Service
+  private filteredTodos: Todo[]; // Tương tự cái ni
+
   private lengthSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   private displayTodosSubject: BehaviorSubject<Todo[]> = new BehaviorSubject<Todo[]>([]);
+
   private currentFilter: Filter = Filter.All;
 
   todos$: Observable<Todo[]> = this.displayTodosSubject.asObservable();
@@ -83,7 +85,7 @@ export class TodoService {
       return {
         ...todo,
         isCompleted: !this.todos.every(t => t.isCompleted)
-      }
+      };
     });
     this.updateToLocalStorage();
   }

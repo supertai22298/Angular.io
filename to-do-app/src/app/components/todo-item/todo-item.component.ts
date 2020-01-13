@@ -57,6 +57,7 @@ export class TodoItemComponent implements OnInit {
     });
   }
   submitEditTodo(event: KeyboardEvent) {
+    // tslint:disable-next-line: deprecation
     const { keyCode } = event;
     event.preventDefault();
 

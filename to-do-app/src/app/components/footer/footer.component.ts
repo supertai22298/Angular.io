@@ -42,7 +42,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   setActiveFilterBtn(type: Filter) {
     this.filterButtons.forEach(btn => {
       btn.isActive = btn.type === type;
-    })
+    });
   }
   ngOnDestroy() {
     this.destroy$.next();
