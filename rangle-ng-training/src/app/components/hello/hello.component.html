@@ -1,0 +1,10 @@
+<p>
+  <button (click)="onClickTitle()">Click me</button>
+  {{  title }}
+  <ng-content select="section"></ng-content>
+  <ng-content select=".test-class"></ng-content>
+</p>
+
+<hr>
+
+<ng-content></ng-content>

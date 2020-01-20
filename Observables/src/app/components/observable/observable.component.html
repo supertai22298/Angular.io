@@ -1,0 +1,9 @@
+<h1> {{status}} </h1>
+<h6 style="margin-bottom: 0">VALUES:</h6>
+<div *ngFor="let value of values">{{ value }}</div>
+<h6 style="margin-bottom: 0">ERRORs:</h6>
+<div>Errors: {{anyErrors}}</div>
+<h6 style="margin-bottom: 0">FINISHED:</h6>
+<div>Finished: {{ finished }}</div>
+<h6 style="margin-bottom: 0">UNSUBSCRIPTION: {{subscribed}} </h6>
+<button style="margin-top: 2rem;" (click)="init()">Init</button>
